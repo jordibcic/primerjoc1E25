@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://df5onv2upamv0"]
+
+[ext_resource type="Texture2D" uid="uid://7fwvxrrxt10i" path="res://Imatges/Coat_of_Arms_of_Barcelona.svg.png" id="1_0j0i7"]
+[ext_resource type="Script" uid="uid://bhs74gudqu2bq" path="res://Scripts/Personatge_gravetat.gd" id="1_vvgje"]
+[ext_resource type="Texture2D" uid="uid://bpqr1fxqdj0cq" path="res://Imatges/icon.svg" id="2_0j0i7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e30qn"]
+size = Vector2(121, 123)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lubv8"]
+size = Vector2(1113, 42)
+
+[node name="Gravetat" type="Node2D"]
+
+[node name="CoatOfArmsOfBarcelona_svg" type="Sprite2D" parent="."]
+position = Vector2(530, 69)
+texture = ExtResource("1_0j0i7")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(547, 225)
+script = ExtResource("1_vvgje")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_0j0i7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_e30qn")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(572, 525)
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -556.0
+offset_top = -20.0
+offset_right = 558.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1.5, -1)
+shape = SubResource("RectangleShape2D_lubv8")

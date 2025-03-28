@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bsd46bx0pyihx"]
+
+[ext_resource type="PackedScene" uid="uid://e7leiiho4xvg" path="res://Escenes/jugador.tscn" id="1_nxaih"]
+[ext_resource type="PackedScene" uid="uid://bdtqsxvystvop" path="res://Escenes/paret.tscn" id="2_xniif"]
+[ext_resource type="PackedScene" uid="uid://d1jiwilbpw6ec" path="res://Escenes/detector.tscn" id="3_xniif"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Detector" parent="." instance=ExtResource("3_xniif")]
+position = Vector2(860, 480)
+
+[node name="Paret" parent="." instance=ExtResource("2_xniif")]
+position = Vector2(676, 377)
+
+[node name="Paret2" parent="." instance=ExtResource("2_xniif")]
+position = Vector2(672, 192)
+
+[node name="Paret3" parent="." instance=ExtResource("2_xniif")]
+position = Vector2(190, 433)
+
+[node name="Jugador2" parent="." instance=ExtResource("1_nxaih")]
+position = Vector2(412, 274)
+
+[node name="Paret4" parent="." instance=ExtResource("2_xniif")]
+position = Vector2(73, 101)

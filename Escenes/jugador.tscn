@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://e7leiiho4xvg"]
+
+[ext_resource type="Script" uid="uid://bs0ph51ghlrn2" path="res://Scripts/jugador.gd" id="1_xyf7p"]
+[ext_resource type="Texture2D" uid="uid://bpqr1fxqdj0cq" path="res://Imatges/icon.svg" id="2_mvi0r"]
+[ext_resource type="Texture2D" uid="uid://7fwvxrrxt10i" path="res://Imatges/Coat_of_Arms_of_Barcelona.svg.png" id="3_4urkw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xniif"]
+size = Vector2(130, 162)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_xyf7p")
+
+[node name="Godot" type="Sprite2D" parent="."]
+texture = ExtResource("2_mvi0r")
+
+[node name="Barcelona" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(46, 70)
+scale = Vector2(0.12, 0.108468)
+texture = ExtResource("3_4urkw")
+
+[node name="Barcelona2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-44, 68)
+scale = Vector2(0.12, 0.108468)
+texture = ExtResource("3_4urkw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 19)
+shape = SubResource("RectangleShape2D_xniif")
+
+[node name="Camera2D" type="Camera2D" parent="."]
