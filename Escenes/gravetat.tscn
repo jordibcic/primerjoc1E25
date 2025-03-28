@@ -15,6 +15,7 @@ size = Vector2(1113, 42)
 [node name="CoatOfArmsOfBarcelona_svg" type="Sprite2D" parent="."]
 position = Vector2(530, 69)
 texture = ExtResource("1_0j0i7")
+flip_v = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 position = Vector2(547, 225)

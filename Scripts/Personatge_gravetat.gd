@@ -11,7 +11,6 @@ func _process(delta: float) -> void:
 	var dx := Input.get_axis("moure_esquerra", "moure_dreta")
 	velocity.x = 0
 	velocity.x += dx * velocitat
-	print(salts_disponibles)
 	if Input.is_action_just_pressed("salta") and salts_disponibles > 0:
 		velocity.y += SALT
 		salts_disponibles -= 1
