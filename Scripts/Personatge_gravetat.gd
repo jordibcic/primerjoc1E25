@@ -20,3 +20,4 @@ func _process(delta: float) -> void:
 	move_and_slide()
 	if is_on_floor():
 		salts_disponibles = MAX_SALTS
+		$Sprite2D.flip_v = false
