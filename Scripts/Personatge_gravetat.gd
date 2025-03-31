@@ -5,7 +5,7 @@ var gravetat := Vector2.DOWN * 980
 var velocitat := 200
 var SALT := -1000
 var salts_disponibles = MAX_SALTS
-var MAX_SALTS = 3
+var MAX_SALTS = 2
 
 func _process(delta: float) -> void:
 	var dx := Input.get_axis("moure_esquerra", "moure_dreta")
@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("salta") and salts_disponibles > 0:
 		velocity.y += SALT
 		salts_disponibles -= 1
+		$Sprite2D.flip_v = not $Sprite2D.flip_v
 
 	velocity  += gravetat * delta
 	move_and_slide()
